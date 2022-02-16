@@ -1,0 +1,2 @@
+// alert("conectado");
+document.write();
