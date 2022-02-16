@@ -8,25 +8,36 @@ function write_FizzBuzz(ini, end)
     {
         divisible = false;
 
-        if (i % 3 == 0)
+        if (Residuo(i, 3))
         {
-            document.write("fizz");
-            divisible = true;    
+            document.write("fizz");    
         }
 
-        if (i % 5 == 0)
+        if (Residuo(i, 5))
         {
             document.write("Buzz");    
-            divisible = true
         }
 
-        if (!divisible)
+        if (!Residuo(i, 3) && !Residuo(i, 5))
         {
             document.write(i);
         }
         document.write("<br/>");
     }
     
+}
+
+function Residuo(num, divisor)
+{
+    if (num % divisor == 0)
+    {
+        return true;
+    }
+    
+    else
+    {
+        return false;
+    }
 }
 
 write_FizzBuzz(0, 15);
