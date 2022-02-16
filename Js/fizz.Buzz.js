@@ -6,24 +6,21 @@ function write_FizzBuzz(ini, end)
 {
     for(var i = ini; i <= end; i++)
     {
-        
-        if (i % 3 == 0 && i % 5 == 0)
-        {
-            document.write("fizzBuzz");
-        }
+        divisible = false;
 
-        else if (i % 3 == 0)
+        if (i % 3 == 0)
         {
             document.write("fizz");
             divisible = true;    
         }
 
-        else if (i % 5 == 0)
+        if (i % 5 == 0)
         {
             document.write("Buzz");    
             divisible = true
         }
-        else
+
+        if (!divisible)
         {
             document.write(i);
         }
